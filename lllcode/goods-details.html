@@ -20,8 +20,10 @@
     <!-- 轮播图 -->
     <!-- <script src="./js/slide.js"></script> -->
     <!-- layui -->
-    <link rel="stylesheet" href="./layui-v2.6.8/layui/css/layui.css">
-    <script src="./layui-v2.6.8/layui/layui.js"></script>
+    <!-- <link rel="stylesheet" href="./layui-v2.6.8/layui/css/layui.css"> -->
+    <!-- <script src="./layui-v2.6.8/layui/layui.js"></script> -->
+     <!-- 引入axios -->
+     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 </head>
 
 
@@ -546,17 +548,17 @@
     </header>
     <!-- 吸顶效果 -->
     <div class="xi-product">
-        <script id="tpl1"  type="type/html">
+        <!-- <script id="tpl1"  type="type/html"> -->
             <div class="xm-nav">
                 <div class="container">
-                    <h2>{{da.pName}}</h2>
+                    <h2>Redmi K30 5G</h2>
                     <a href="#">用户评价</a>
                 </div>
             </div>
-        </script>
+        <!-- </script> -->
     </div>
     <!-- 主要部分 -->
-    <div class="page">
+    <div class="page clearfix">
         <!-- 有×叉 -->
         <div class="mi-details">
             <div class="login-notice">
@@ -572,51 +574,22 @@
         <!-- 弹性盒产品左右栏 -->
         <div class="product-box">
             <!-- 动态渲染区域 -->
-            <script type="type/html" id="tpl">
-            <!-- 左边轮播 -->
-            <div class="img-left">
-                <div class="container">
-                    <ul class="wrapper">
-                        <li style="display:block">
-                            <a href="javascript:;">
-                                <img src="{{img_arr[0]}}">
-                            </a>
-                        </li>
-                    </ul>
-
-
-                    <!--翻页按钮区域-->
-                    <div class="turning">
-                        <a href="javascript:;">&lt;</a>
-                        <a href="javascript:;">&gt;</a>
-                    </div>
-                    <!--分页器区域-->
-                    <div class="pagination">
-                        <span class="active"></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                    </div>
-                </div>
-            </div>
-            <!-- 右边产品介绍 -->
-            <div class="product-con">
-                <h2>{{da.pName}}</h2>
+        </div>
+        <div class="details">
+            <!-- <div class="product-con">
+                <h2>Redmi K30 5G</h2>
                 <p class="sale-decr">
-                    {{da.pInfo}}
+                    双模5G/三路并发/高通骁龙765G /7nm 5G低功耗处理器/120Hz高帧率流速屏/6.6''小孔径全面屏/索尼6400万前后六摄/最高可选8GB+256GB大存储/4500mAh+30W/快充/3D四曲面玻璃机身Ⅰ多功能NFC
                 </p>
                 <p class="company-info">
                     小米自营
                 </p>
                 <p class="price-info">
                     <span>
-                        {{da.pPrice}}
+                    
                     </span>
                 </p>
-                <div class="line">
-
-                </div>
+                <div class="line"></div>
                 <div class="product-address">
                     <i class="iconfont icon-dingwei icon"></i>
                     <div class="address-con">
@@ -639,9 +612,9 @@
                         选择颜色
                     </div>
                     <ul class="clearfix">
-                        <li title="{{da.color}}" class="active">
+                        <li title="紫玉幻境" class="active">
                             <a href="">
-                                {{da.color}}
+                                紫玉幻境
                             </a>
                         </li>
                     </ul>
@@ -649,16 +622,16 @@
                 <div class="selected-list">
                     <ul>
                         <li>
-                            {{da.pName}} {{da.color}} 通用
-                            <span class="fr">{{da.pPrice}}</span>
+                            Redmi K30 5G 紫玉幻境 通用
+                            <span class="fr">￥1799</span>
                         </li>
                     </ul>
                     <div class="total-price">
-                        总计：{{da.pPrice}}
+                        现价：￥1799
                     </div>
                 </div>
                 <div class="btn-box">
-                    <div class="putin"> <a href="javascript:0;">加入购物车</a></div>
+                    <div class="putin">  <a href="javascript:0;" onclick = "Goods.addGoods()">加入购物车</a></div>
                     <div class="likes"> <a href="#"><i class="iconfont icon-xin"></i>喜欢</a></div>
                 </div>
                 <div class="after-sale-info">
@@ -698,10 +671,10 @@
                         </a>
                     </span>
                 </div>
-            </div>
-            </script>
+            </div> -->
         </div>
     </div>
+</div>
     <!-- 那两张图片 -->
     <div class="pic-main">
         <!-- 官方微信 -->
@@ -890,12 +863,9 @@
     </footer>
 
     <!--引入js -->
-    <!-- <script src="./js/floor.js"></script> -->
-    <script src="./js/footer.js"></script>
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/header.js"></script>
-    <script src="./js/goods-details.js"></script>
-    <script src="./js/template-web.min.js"></script>
+   
+    <script src="./js/goodsdetails.js"></script>
+    
     <!-- 工具栏右侧的 -->
     <div class="home-tool-bar">
         <a href="javascript:void(0);" class="item">

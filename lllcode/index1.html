@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./iconfooter/iconfont.css">
     <script src="./iconfooter/iconfont.js"></script>
     <!-- 引入axios -->
-    <script src="./js/axios.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 
 
@@ -1400,7 +1400,7 @@
                         <li><img src="./img/banner2.webp" alt=""></li>
                         <li><img src="./img/banner3.webp" alt=""></li>
                         <li><img src="./img/banner4.webp" alt=""></li>
-                        <li><img src="./img/banner1.jpg" alt=""></li>
+                        <!-- <li><img src="./img/banner1.jpg" alt=""></li> -->
                     </ul>
                     <div class="banner-arr">
                         <span class="left">
@@ -1468,12 +1468,14 @@
             </div>
 
             <!-- 手机 JSON渲染商品到页面-->
-            <div class="c-item1 c-item ">
+            <div class="c-item1 c-item " id="phone-loft">
                 <div class="item-title">
                     <div class="title-txt">手机</div>
                     <div class="more fs16">
-                        <span>查看更多</span>
-                        <i class="iconfont icon-right-circle-fill"></i>
+                        <a href="./moreGoods.html">
+                            <span>查看更多</span>
+                            <i class="iconfont icon-right-circle-fill"></i>
+                        </a>
                     </div>
                 </div>
                 <div class="item-con active clearfix">
@@ -1554,7 +1556,7 @@
 
             </div>
             <!-- 家电 -->
-            <div class="c-item2 c-item">
+            <div class="c-item2 c-item" id="elec-loft">
                 <div class="item-title">
                     <div class="title-txt">家电</div>
                     <ul class="more fs16">
@@ -1563,8 +1565,8 @@
                     </ul>
                 </div>
                 <div class="item-con active clear_fix">
-                    <ul class="items">
-                        <li class="item">
+                    <ul class="items elec">
+                        <!-- <li class="item">
                             <img src="./img/家电1.webp" class="pic" alt="">
                         </li>
                         <li class="item">
@@ -1652,7 +1654,7 @@
                                     </div>
                                 </li>
                             </ul>
-                        </li>
+                        </li> -->
                     </ul>
                 </div>
                 <div class="item-con clear_fix">
@@ -1751,7 +1753,7 @@
             </div>
 
             <!-- 智能 -->
-            <div class="c-item2 c-item">
+            <div class="c-item2 c-item" id="intel-loft">
                 <div class="item-title">
                     <div class="title-txt">智能</div>
                     <div class="more fs16">
@@ -1862,7 +1864,7 @@
             </div>
 
             <!-- 搭配 -->
-            <div class="c-item2 c-item">
+            <div class="c-item2 c-item" id="coll-loft">
                 <div class="item-title">
                     <div class="title-txt">搭配</div>
                     <div class="more fs16">
@@ -1968,7 +1970,7 @@
             </div>
 
             <!-- 配件 -->
-            <div class="c-item2 c-item">
+            <div class="c-item2 c-item" id="parts-loft">
                 <div class="item-title">
                     <div class="title-txt">配件</div>
                     <div class="more fs16">
@@ -2074,7 +2076,7 @@
             </div>
 
             <!-- 周边 -->
-            <div class="c-item2 c-item">
+            <div class="c-item2 c-item" id="per-loft">
                 <div class="item-title">
                     <div class="title-txt">周边</div>
                     <div class="more fs16">
@@ -2184,7 +2186,7 @@
             </div>
 
             <!-- 视频 -->
-            <div class="c-item3 c-item">
+            <div class="c-item3 c-item" id="video-loft">
                 <div class="item-title">
                     <div class="title-txt">视频</div>
                     <div class="more fs16">
@@ -2236,6 +2238,7 @@
 
         </div>
     </section>
+    
     <!-- 工具栏 -->
     <section class="home-tool">
         <ul>
@@ -2278,34 +2281,41 @@
 
     <section class="home-loft">
         <ul>
-            <li>
+            
+            <a href="#phone-loft"><li>
                 <i class="iconfont  icon-shouji"></i>
                 <span>手机</span>
-            </li>
-            <li>
+            </li></a>
+            
+            <a href="#elec-loft"><li>
                 <i class="iconfont  icon-jiadian"></i>
-                <span>家电</span>
-            </li>
-            <li>
+                <span> 家电</span>
+            </li></a>
+
+            <a href="#intel-loft"><li>
                 <i class="iconfont  icon-jiqiren"></i>
                 <span>智能</span>
-            </li>
-            <li>
+            </li></a>
+
+            <a href="#coll-loft"><li>
                 <i class="iconfont  icon-shoubiao"></i>
                 <span>搭配</span>
-            </li>
-            <li>
+            </li></a>
+
+            <a href="#parts-loft"><li>
                 <i class="iconfont  icon-chongdianqi"></i>
                 <span>配件</span>
-            </li>
-            <li>
+            </li></a>
+
+            <a href="#per-loft"><li>
                 <i class="iconfont  icon-tubiaoCSban-"></i>
                 <span>周边</span>
-            </li>
-            <li>
+            </li></a>
+            
+            <a href="#video-loft"><li>
                 <i class="iconfont  icon-shipin"></i>
                 <span>视频</span>
-            </li>
+            </li></a>
         </ul>
     </section>
 

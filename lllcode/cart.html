@@ -12,12 +12,13 @@
     <link rel="stylesheet" href="./iconfont/iconfont.css">
     <link rel="shortcut icon" href="./icon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./layui-v2.6.8/layui/css/layui.css">
-    <link rel="stylesheet" href="./css/loading.css">
-
+    <!-- <link rel="stylesheet" href="./layui-v2.6.8/layui/css/layui.css"> -->
+    <!-- <link rel="stylesheet" href="./css/loading.css"> -->
+  <!-- <script type="text/javascript" src="./js/layer-master/src/layer.js"></script> -->
+    <!-- 引入axios -->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
 </head>
-
 <body>
     <!-- 头部 -->
     <header>
@@ -37,9 +38,50 @@
         </div>
     </header>
     <!-- 购物区 -->
-    <section>
-        <div class="s-con w">
-            <div class="cart clearfix">
+    <section id="cart">
+        <table id="cartTable">
+            <thead>
+              <tr>
+                <th>
+                  <label>
+                    <input class="check-all check" type="checkbox" />&nbsp;全选</label>
+                </th>
+                <th>商品</th>
+                <th>单价</th>
+                <th>数量</th>
+                <th>小计</th>
+                <th>操作</th>
+              </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+        
+          <div class="foot" id="foot">
+            <label class="fl select-all">
+              <input type="checkbox" class="check-all check" />&nbsp;全选</label>
+            <a class="fl delete" id="deleteAll" href="javascript:;">删除</a>
+            <div class="fr closing">结 算</div>
+            <div class="fr total">合计：￥
+              <span id="priceTotal">0.00</span>
+            </div>
+            <div class="fr selected" id="selected">已选商品
+              <span id="selectedTotal">0</span>件
+              <span class="arrow up">︽</span>
+              <span class="arrow down">︾</span>
+            </div>
+            <div class="selected-view">
+              <div id="selectedViewList" class="clearfix">
+                <!--<div><img src="images/1.jpg"><span>取消选择</span></div>-->
+              </div>
+              <span class="arrow">
+                <span></span>
+              </span>
+            </div>
+          </div>
+          
+        <!-- <div class="s-con w"> -->
+            <!-- <div class="cart clearfix">
                 <div class="cart-bg fl"></div>
                 <div class="cart-info fl">
                     <h2>你的购物车还是空的!</h2>
@@ -57,10 +99,10 @@
                         </a>
                     </div>
                 </div>
-            </div>
+            </div> -->
 
             <!-- 购物车选项 -->
-            <table>
+            <!-- <table>
                 <thead>
                     <tr>
                         <th style="width: 110px;">序号</th>
@@ -73,17 +115,18 @@
                     </tr>
                 </thead>
                 <tbody id="tab"></tbody>
-            </table>
+            </table> -->
 
             <!-- 合计 -->
-            <div class="cart-bar">
+            <!-- <div class="cart-bar">
                 <p class="fl">共<span class="buy-number"></span>件商品</p>
                 <div class="pay fr">去结算</div>
                 <p class="fr">合计：<span class="total-money"></span>元</p>
             </div>
 
-        </div>
+        </div> -->
     </section>
+
     <!-- 推荐区 -->
     <section>
         <div class="r-con w">
@@ -299,7 +342,7 @@
         </div>
     </section>
 
-    <script type="type/html" id="tpl">
+    <!-- <script type="type/html" id="tpl">
         {{ each data item}}
         <tr>
             <td>{{ item.id}} </td>
@@ -316,30 +359,10 @@
         </tr>
          
         {{ /each }}
-    </script>
-    <script src="./js/jquery.min.js"></script>
-    <script src="./js/template-web.min.js"></script>
-
+    </script> -->
     <script src="./js/cart.js"></script>
-    <script src="./js/loading.js"></script>
-    <script src="./layui-v2.6.8/layui/layui.js"></script>
 
-    <script>
-
-        
-      
-     
     
-
-
-
-
-
-
-
-
-      
-    </script>
 
 </body>
 

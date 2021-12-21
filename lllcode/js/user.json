@@ -1,0 +1,599 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "phoneNum": "18324103341",
+      "pwd": "123456",
+      "email": "3277425129@qq.com"
+    },
+    {
+      "id": 2,
+      "phoneNum": "18625849987",
+      "pwd": "123456",
+      "email": "3277425129@qq.com"
+    },
+    {
+      "phoneNum": "18654123341",
+      "pwd": "123456wyl",
+      "email": "3288745126@qq.com",
+      "id": 3
+    },
+    {
+      "phoneNum": "17451245561",
+      "pwd": "123456wyl",
+      "email": "3255748156@qq.com",
+      "id": 5
+    },
+    {
+      "phoneNum": "13586381491",
+      "pwd": "321456wyl",
+      "email": "4277894561@qq.com",
+      "id": 6
+    },
+    {
+      "phoneNum": "15987451111",
+      "pwd": "123456wyl",
+      "email": "3277412584@qq.com",
+      "id": 7
+    },
+    {
+      "phoneNum": "18695745561",
+      "pwd": "123645wyl",
+      "email": "3277425129@qq.com",
+      "id": 8
+    },
+    {
+      "phoneNum": "13564289741",
+      "pwd": "321456wyl",
+      "email": "3247784512@qq.com",
+      "id": 9
+    },
+    {
+      "phoneNum": "18999965412",
+      "pwd": "123456wyl",
+      "email": "324787541@qq.com",
+      "id": 10
+    },
+    {
+      "phoneNum": "123456789110",
+      "pwd": "123456",
+      "email": "123456",
+      "id": 11
+    }
+  ],
+  "phone": [
+    {
+      "id": 1,
+      "src": "https://z3.ax1x.com/2021/09/23/4wdy1P.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 2,
+      "src": "https://z3.ax1x.com/2021/09/23/4wdopq.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 3,
+      "src": "https://z3.ax1x.com/2021/09/23/4wd4ts.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 4,
+      "src": "https://z3.ax1x.com/2021/09/23/4wdDfI.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 5,
+      "src": "https://z3.ax1x.com/2021/09/23/4wdcX8.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 6,
+      "src": "https://z3.ax1x.com/2021/09/23/4wdT10.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 7,
+      "src": "https://z3.ax1x.com/2021/09/23/4wd7cV.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 8,
+      "src": "https://z3.ax1x.com/2021/09/23/4wdHXT.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    }
+  ],
+  "equipment": [
+    {
+      "id": 1,
+      "src": "./img/家电1.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 2,
+      "src": "./img/家电2.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 3,
+      "src": "./img/家电3.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 4,
+      "src": "./img/家电4.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 5,
+      "src": "./img/家电5.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 6,
+      "src": "./img/家电6.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 7,
+      "src": "./img/家电7.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 8,
+      "src": "./img/家电8.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 9,
+      "src": "./img/家电9.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 10,
+      "src": "./img/家电10.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    }
+  ],
+  "data":[
+    {
+      "id": 1,
+      "src": "https://z3.ax1x.com/2021/09/23/4wdy1P.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 2,
+      "src": "https://z3.ax1x.com/2021/09/23/4wdopq.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 3,
+      "src": "https://z3.ax1x.com/2021/09/23/4wd4ts.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 4,
+      "src": "https://z3.ax1x.com/2021/09/23/4wdDfI.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 5,
+      "src": "https://z3.ax1x.com/2021/09/23/4wdcX8.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 6,
+      "src": "https://z3.ax1x.com/2021/09/23/4wdT10.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 7,
+      "src": "https://z3.ax1x.com/2021/09/23/4wd7cV.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 8,
+      "src": "https://z3.ax1x.com/2021/09/23/4wdHXT.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 9,
+      "src": "./img/家电2.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 10,
+      "src": "./img/家电3.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 11,
+      "src": "./img/家电4.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 12,
+      "src": "./img/家电5.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 13,
+      "src": "./img/家电6.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 14,
+      "src": "./img/家电7.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 15,
+      "src": "./img/家电8.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 16,
+      "src": "./img/家电9.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 17,
+      "src": "./img/智能2.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 18,
+      "src": "./img/智能3.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 19,
+      "src": "./img/智能4.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 20,
+      "src": "./img/智能5.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 21,
+      "src": "./img/智能6.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 22,
+      "src": "./img/智能7.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 23,
+      "src": "./img/智能8.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 24,
+      "src": "./img/智能9.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 25,
+      "src": "./img/搭配2.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 26,
+      "src": "./img/搭配3.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 27,
+      "src": "./img/搭配4.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 28,
+      "src": "./img/搭配5.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 29,
+      "src": "./img/搭配6.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 30,
+      "src": "./img/搭配7.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 31,
+      "src": "./img/搭配8.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 32,
+      "src": "./img/搭配9.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 33,
+      "src": "./img/配件2.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 34,
+      "src": "./img/配件3.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 35,
+      "src": "./img/配件4.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 36,
+      "src": "./img/配件5.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 37,
+      "src": "./img/配件6.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 38,
+      "src": "./img/配件7.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 39,
+      "src": "./img/配件8.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 40,
+      "src": "./img/配件9.jpg",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 41,
+      "src": "./img/周边2.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 42,
+      "src": "./img/周边3.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 43,
+      "src": "./img/周边4.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 44,
+      "src": "./img/周边5.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 45,
+      "src": "./img/周边6.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 46,
+      "src": "./img/周边7.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 47,
+      "src": "./img/周边8.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    },
+    {
+      "id": 48,
+      "src": "./img/周边9.webp",
+      "name": "Redmi K30 5G",
+      "info": "120Hz高帧率流速屏",
+      "nowPrice": "1799元",
+      "oldPrice": "8899元"
+    }
+
+  ]
+}

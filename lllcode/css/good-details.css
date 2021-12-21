@@ -203,9 +203,7 @@ header .headNav .h-list li .down-menu-wrapper .down-menu li p:last-child {
     color: #ff6700;
 }
 
-header .headNav .h-list .h-list-first {
-    /* visibility: hidden; */
-}
+
 
 header .headNav .h-search {
     width: 295px;
@@ -268,7 +266,7 @@ header .headNav .h-search .search-list li {
 }
 .xi-product{
     position: relative;
-    z-index: 4;
+    z-index: -1;
     background: #fff;
     border-top: 1px solid #e0e0e0;
     border-bottom: 1px solid #e0e0e0;
@@ -324,102 +322,118 @@ header .headNav .h-search .search-list li {
     vertical-align: middle;
     margin-left: 10px;
 }
-.page .product-box{
-    width:1226px;;
-    display: flex;
+/* .page .product-box{
+    width:1200px;
+    display: flex; */
     /* -webkit-box-pack: center;
     -ms-flex-pack: center; */
-    justify-content: center;
+    /* justify-content: center;
     padding-top: 32px;
     padding-bottom: 12px;
     margin: 0 auto;
-}
-
-.product-box .img-left{
-    width: 606px;
-    position: relative;
+}*/
+/* 做出放大镜 */
+.product-box {
+    float: left;
+    width: 50%;
+    height: 800PX;
+    position: relative; 
     /* background-color: skyblue; */
-}
+} 
 
-/* 轮播效果 */
-.product-box .img-left .container {
+
+/* .wrap {
+    margin: 0;
+    width: 50%;
+    height: 800px; */
+    /* margin: 50px auto; */
+/* } */
+
+.box {
+    margin: 0;
+    width: 844px;
+    height: 800px;
     position: relative;
-    width: 560px;
-    height: 560px;
-    margin: 0 auto;
-    /* transform : translateY(3%); */
-    /* 这是垂直居中 */
+    /* background-color: royalblue; */
 }
-.img-left .container .wrapper img{
+
+.box>.smallBox {
+    /* float: left; */
+    width: 550px;
+    height: 550px;
+    position: absolute;
+    /* border: 1px solid #ccc; */
+}
+
+.box>.smallBox>img {
     width: 100%;
-    height:100%;
+    height: 100%;
 }
-.product-box .img-left .container .wrapper {
-    list-style: none;
-    overflow: hidden;
-}
-.product-box .img-left .container .wrapper li {
-    /*默认所有图片不显示*/
+
+.box>.smallBox>.mask {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background-color: #eff14c8f;
     display: none;
+    cursor: move;
 }
 
-.product-box .img-left .container .wrapper li:first-of-type {
-    /*默认所有图片不显示*/
-}
-
-
-
-.product-box .img-left .container .turning {
+.box>.bigBox {
+    display: none;
+    /* float: right; */
+    z-index: 10;
+    width: 300px;
+    height: 300px;
     position: absolute;
-    left: 0;
-    top: calc(50% - 20px);
-    /* calc */
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    overflow: hidden;
+    top:0;
+    left: 552px;
+    /* border: 1px solid #ccc; */
+
 }
 
-.product-box .img-left .container .turning a {
-    text-decoration: none;
-    color: #b0b0b0;
-    height: 40px;
+.box>.bigBox>img {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+}
+
+/* 右侧详情信息 */
+.details {
+    float: right;
+    width: 50%;
+    height: 800px;
     /* background-color: rosybrown; */
-    opacity: .5;
-    font: 30px/40px Arial;
-    width: 41px;
-    height: 69px;
-    text-align: center;
-    line-height: 69px;
+}
+.clearfix:after {
+    /* 添加一个块级元素 */
+        display: block;
+    /* 这个块级元素是空的 */
+        content: '';
+    /* 然后清除浮动 */
+        clear: both;
+    /* 设置高度为0 */
+        height: 0;
+ }
+/* .wrap>.pic {
+    width: 600px;
+    height: 200px;
 }
 
-/*分页器*/
-.product-box .img-left .container .pagination {
-    position: absolute;
-    left: 0;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-}
-
-.product-box .img-left .container .pagination span {
-    display: inline-block;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    border: 1px solid #ccc;
-}
-
-.product-box .img-left .container .pagination span.active {
-    background: #b0b0b0;
-}
-
-
+.wrap>.pic>img {
+    width: 50px;
+    height: 50px;
+    float: left;
+    margin: 10px;
+} */
 
 
 
 .product-box .product-con{
-    flex: 1;
+    /* flex: 1; */
     margin-left: 20px;
     /* background-color: pink; */
 }
@@ -579,6 +593,20 @@ header .headNav .h-search .search-list li {
     font-style: normal;
     vertical-align: middle;
 }
+.pic-main .view .title{
+    width: 1226px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+
+
+
+
+.active {
+    border: 1px solid red;
+}
+
 .pic-main .view .title{
     width: 1226px;
     margin-right: auto;
