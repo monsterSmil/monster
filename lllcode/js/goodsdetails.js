@@ -175,9 +175,7 @@ class Goods{
                     </div>
                 </div>
             `;
-            // htmlDetails += `
-            
-            // `;
+           
         });
         let htmladd = '';
         data.forEach(goods => {
@@ -309,8 +307,8 @@ class Goods{
          smallBox.onmousemove=(e)=>{
             e=e||window.event
             // 确定鼠标位置
-            var x=e.clientX-smallBox.offsetParent.offsetLeft-mask.offsetWidth/2
-            var y=e.clientY-smallBox.offsetParent.offsetTop-mask.offsetHeight/2
+            var x=e.pageX-smallBox.offsetParent.offsetLeft-mask.offsetWidth/2
+            var y=e.pageY-smallBox.offsetParent.offsetTop-mask.offsetHeight/2
 
             // 判断边界
             if(x<=0){

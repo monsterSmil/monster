@@ -337,7 +337,7 @@ header .headNav .h-search .search-list li {
     float: left;
     width: 50%;
     height: 800PX;
-    position: relative; 
+    /* position: relative;  */
     /* background-color: skyblue; */
 } 
 
@@ -385,8 +385,8 @@ header .headNav .h-search .search-list li {
     display: none;
     /* float: right; */
     z-index: 10;
-    width: 300px;
-    height: 300px;
+    width: 500px;
+    height: 600px;
     position: absolute;
     overflow: hidden;
     top:0;
@@ -396,8 +396,8 @@ header .headNav .h-search .search-list li {
 }
 
 .box>.bigBox>img {
-    width: 600px;
-    height: 600px;
+    width: 900px;
+    height: 900px;
     position: absolute;
 }
 

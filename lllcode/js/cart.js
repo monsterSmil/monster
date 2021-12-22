@@ -7,6 +7,9 @@ class Cart {
         this.getCartGoods();
         this.checkAll();
 
+        this.deleteAll = document.querySelector('#deleteAll');
+        // console.log(this.deleteAll);
+        this.deleteAll.addEventListener('click', this.deleteAllFn.bind(this));
         // 给tbody绑定点击事件【事件委托的对象】
         this.tbody.addEventListener('click', this.clickBubbleFn.bind(this));
     }
@@ -18,6 +21,12 @@ class Cart {
         // console.log(tar);
         // 判断操作的是否为单个按钮
         tar.classList.contains('check-one') && this.oneCheckedFn(tar);
+        // 判断操作的是否为加号按钮
+        tar.classList.contains('add') && this.addClickFn(tar);
+        // 判断操作的是否为减号按钮
+        tar.classList.contains('reduce') && this.decClickFn(tar);
+        // 判断操作的是否为删除按钮
+        tar.classList.contains('delete') && this.delClickFn(tar);
     }
 
 
@@ -154,7 +163,132 @@ class Cart {
         sta && allone.forEach(ele => {
             // console.log(ele);
             // 判断当前的单个按钮状态
-        })
+            if(ele.checked) {
+                // console.log(ele);
+                // 找到tr，获取小计和数量
+                let trObj = ele.parentNode.parentNode;
+                totalNum += (trObj.querySelector('.count input').value - 0);
+                totalPrice += (trObj.querySelector('.subtotal').innerHTML - 0);
+            };
+        });
+        let priceTotal = document.querySelector('#priceTotal');
+        let selectedTotal = document.querySelector('#selectedTotal');
+        priceTotal.innerHTML = totalPrice;
+        selectedTotal.innerHTML = totalNum;
+    }
+
+    // 增加数量
+    addClickFn(target) {
+        // console.log(target);
+        // 获取当前加号按钮的数量，上一个兄弟节点
+        let num = target.previousElementSibling;
+        // console.log(num);
+        num.value = num.value - 0 + 1;
+        // 获取小计
+        let sub = target.parentNode.nextElementSibling;
+        // console.log(sub);
+        // 获取单价
+        let price = target.parentNode.previousElementSibling.innerHTML;
+        // console.log(price);获取到的是字符串
+        sub.innerHTML = parseInt(num.value * parseInt(price) * 100) / 100;
+        // 当input框是选中的时候，统计价格和数量
+        let tr = target.parentNode.parentNode;
+        // console.log(tr);
+        tr.querySelector('.check-one').checked && this.subTotal();
+        // 计算完成修改localStorage中的值
+        this.modifyLocal(tr.getAttribute('goods-id'), num.value);
+
+    }
+
+
+    // 减少数量
+    decClickFn(target) {
+        // 获取减号按钮
+        let num = target.nextElementSibling;
+        // console.log(num);
+        num.value = num.value - 0 -1;
+        // 获取小计
+        let sub = target.parentNode.nextElementSibling;
+        // console.log(sub);
+        // 获取单价
+        let price = target.parentNode.previousElementSibling.innerHTML;
+        // console.log(price);//获取到的是字符串
+        sub.innerHTML = parseInt(num.value * parseInt(price) * 100) / 100;
+        // console.log(sub.innerHTML);
+        // 当input框被选中时，统计价格和数量
+        let tr = target.parentNode.parentNode;
+        // console.log(tr);
+        tr.querySelector('.check-one').checked && this.subTotal();
+        // 计算完成，修改localStorage中的值
+        this.modifyLocal(tr.getAttribute('goods-id'), num.value);
+        if(num.value == 0) {
+        target.parentNode.parentNode.remove();
+    }
+    }
+
+
+    // 删除商品
+    delClickFn(target) {
+        let that = this;
+        // 获取tr，点击删除，删除的是tr这一行
+        let tr = target.parentNode.parentNode;
+        // console.log(tr);
+        // 点击删除弹出模态框
+        layer.open({
+            title: '确认删除框',
+            content: '确认删除这件商品吗?',
+            btn: ['取消', '确认'],
+            btn2: function (index, layero) {
+              //按钮【按钮二】的回调
+              //return false 开启该代码可禁止点击该按钮关闭
+              // console.log(target);
+              // 删除当前商品节点
+              tr.remove();
+              //处于选中状态则重新计算价格和数量【回调函数的this指向的是当前事件的调用者】
+              tr.querySelector('.check-one').checked && that.subTotal();
+            //   删除后修改localStorage中的数据
+            that.modifyLocal(tr.getAttribute('goods-id'));
+            }
+          });
+    }
+
+
+    // 删除所有商品
+    deleteAllFn() {
+        console.log(111);
+        let that = this;
+        layer.open({
+            title: '确认删除框',
+            content: '确认全部删除吗?',
+            btn: ['取消', '确认'],
+            btn2: function (index, layero) {
+              //按钮【按钮二】的回调
+              //return false 开启该代码可禁止点击该按钮关闭
+              // console.log(target);
+              // 把tbody赋值为空
+              that.tbody.innerHTML = '';
+            //   商品全部删除后，删除localStorage
+                localStorage.removeItem('cart');
+            }
+        });
+    }
+
+
+    // 修改localStorage中的数据，num为0的时候删除
+    modifyLocal(id, num = 0) {
+        // console.log(id, num);
+        // 取出localStorage中的数据
+        let cartGoods = localStorage.getItem('cart');
+        // 如果没有数据终止代码，
+        if(!cartGoods) return;
+        // 解析返回的数据
+        cartGoods = JSON.parse(cartGoods);
+        // console.log(cartGoods);//{1: 4, 2: 3, 3: 3, 6: 2}
+        // 删除对象的属性
+        num == 0 && delete cartGoods[id];
+        // 修改localStorage中商品的数量
+        num != 0 && (cartGoods[id] = num);
+        localStorage.setItem('cart', JSON.stringify(cartGoods));
     }
 
 }

@@ -36,10 +36,10 @@ class Index {
         // console.log(this.lofting);
 
         this.electric = document.querySelector('.item-con>.elec');
-        console.log(this.electric,222);
+        // console.log(this.electric,222);
         // 获取节点【手机商品渲染,要追加到的手机列表】
         this.phone = document.querySelector('.item-con .items')
-        console.log(this.phone,111);
+        // console.log(this.phone,111);
 
        
         //声明一个变量作为改变的下标
@@ -61,9 +61,9 @@ class Index {
         this. leftDisplay()
         this.middleDisplay()
         this. Ceiling() 
-        this.Loft()
         this.phoneList()
         this.electricList()
+        this.cartNum()
     }
     setBtn() {
         //遍历创建li
@@ -300,17 +300,60 @@ class Index {
         
     }
 
-    // 吸顶效果
+    // 吸顶效果【滚动事件】
     Ceiling() {
         // 当卷去的高度大于等于手机模块的高度时，电梯出现
         let that = this;
         // 滚动事件
         onscroll = function() {
-            
+            let lis = that.loft.querySelectorAll('li');
+            // console.log(lis);
             var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
             // 判断滚动距离是否到达手机模块的高度，到达电梯出现
             if(scrollTop >= 700) {
                 that.loft.style.display = 'block'
+                // 手机
+                if(scrollTop < 1460) {
+                    lis[0].classList.add('active');
+                }else {
+                    lis[0].classList.remove('active');
+                }
+                // 家电
+                if(scrollTop >= 1460 && scrollTop <= 2165) {
+                    lis[1].classList.add('active');
+                }else {
+                    lis[1].classList.remove('active');
+                }
+                // 智能
+                if(scrollTop >= 2165 && scrollTop <= 2960) {
+                    lis[2].classList.add('active');
+                }else {
+                    lis[2].classList.remove('active');
+                }
+                // 搭配
+                if(scrollTop >= 2960 && scrollTop <= 3675) {
+                    lis[3].classList.add('active');
+                }else {
+                    lis[3].classList.remove('active');
+                }
+                // 配件
+                if(scrollTop >= 3675 && scrollTop <= 4406) {
+                    lis[4].classList.add('active');
+                }else {
+                    lis[4].classList.remove('active');
+                }
+                // 周边
+                if(scrollTop >= 4406 && scrollTop <= 5131) {
+                    lis[5].classList.add('active');
+                }else {
+                    lis[5].classList.remove('active');
+                }
+                // 视频
+                if(scrollTop >5131) {
+                    lis[6].classList.add('active');
+                }else {
+                    lis[6].classList.remove('active');
+                }
             }else {
                 that.loft.style.display = 'none'
             }
@@ -318,46 +361,46 @@ class Index {
 
     }
     // 电梯样式
-    Loft() {
-        let that = this;
-        // 点击a的时候，给li添加样式
-        // 遍历循环所有li，点击谁给谁添加样式，其余样式清除【排他】【事件委托】
-        // console.log(this.lofting);
-        this.lofting.onclick = function(e) {
-            e = e || window.event;
-            let tar = e.target;
-            // console.log(tar);
-            if(tar.nodeName == 'LI') {
-                // console.log(tar);
+    // Loft() {
+    //     let that = this;
+    //     // 点击a的时候，给li添加样式
+    //     // 遍历循环所有li，点击谁给谁添加样式，其余样式清除【排他】【事件委托】
+    //     // console.log(this.lofting);
+    //     this.lofting.onclick = function(e) {
+    //         e = e || window.event;
+    //         let tar = e.target;
+    //         // console.log(tar);
+    //         if(tar.nodeName == 'LI') {
+    //             // console.log(tar);
                
-                for(let i = 0; i < that.loftChild.length; i++ ) {
-                    // console.log(111);
-                    // 清空所有li的样式
-                    that.loftChild[i].className = '';
-                }
-                tar.className = 'active ';
+    //             for(let i = 0; i < that.loftChild.length; i++ ) {
+    //                 // console.log(111);
+    //                 // 清空所有li的样式
+    //                 that.loftChild[i].className = '';
+    //             }
+    //             tar.className = 'active ';
 
-            }
-        }
+    //         }
+    //     }
 
 
 
-        // let that = this;
-        // //事件委托给ul【鼠标移入，li有背景色，div显示】
-        // this.lofting.click = function(e) {
-        //     e = e || window.event;
-        //     let tar = e.target;
+    //     // let that = this;
+    //     // //事件委托给ul【鼠标移入，li有背景色，div显示】
+    //     // this.lofting.click = function(e) {
+    //     //     e = e || window.event;
+    //     //     let tar = e.target;
            
-        //     // 判断当前鼠标移入的是不是a
-        //     if(tar.nodeName == 'LI') {
-        //         for(let i = 0; i < that.loftChild.length; i++) {
-        //             that.loftChild[i].className = '';
-        //         }
-        //         tar.className = 'active';
-        //     }
-        // }
+    //     //     // 判断当前鼠标移入的是不是a
+    //     //     if(tar.nodeName == 'LI') {
+    //     //         for(let i = 0; i < that.loftChild.length; i++) {
+    //     //             that.loftChild[i].className = '';
+    //     //         }
+    //     //         tar.className = 'active';
+    //     //     }
+    //     // }
         
-    }
+    // }
 
 
     // 手机商品渲染到页面上
@@ -384,6 +427,9 @@ class Index {
     //     // 追加到页面
     //     this.phone.innerHTML = html;
     // }
+    
+
+
     
     // 首页渲染手机商品页面
     async phoneList() {
@@ -416,26 +462,36 @@ class Index {
         // console.log(that);
         // 发送请求，获取数据
         let {data} = await axios.get('http://localhost:3000/equipment');
-        console.log(data);//[{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
+        // console.log(data);//[{…}, {…}, {…}, {…}, {…}, {…}, {…}, {…}]
         // 遍历数组每一个数据追加到页面中
         let html = '';
         data.forEach(elec => {
             // console.log(elec);//{id: 1, src: './img/家电2.webp', name: 'Redmi K30 5G', info: '120Hz高帧率流速屏', nowPrice: '1799元', …}
             html += `
-            <li class="item">
+            <li class="item"> <a href="./goods-details.html?pid=${elec.id}" >
                 <img src="${elec.src}" alt="">
                 <h3 class="item-name">${elec.name}</h3>
                 <p class="item-info">${elec.info}</p>
                 <p class="item-price">
                     <span class="present-price">${elec.nowPrice}</span>
                     <span class="primary-price">${elec.oldPrice}</span>
-                </p>
+                </p></a>
             </li>`;
         });
         // console.log( that.electric);
         that.electric.innerHTML = html;
 
     }
-    
+
+    cartNum() {
+        let res = localStorage.getItem('cart');
+        res = JSON.parse(res);
+        let num = Object.getOwnPropertyNames(res).length;
+        // console.log(num);   
+        //获取购书车数量节点
+        let buy = document.querySelector('.buy-cart span:last-child');
+        // console.log(buy);  
+        buy.innerHTML = num;
+    }
 }
 new Index();
