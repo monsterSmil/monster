@@ -287,6 +287,7 @@ section {
 }
 
 section .s-con {
+    display: none;
     margin: 0 auto;
     padding: 38px 0;
 }
@@ -433,6 +434,7 @@ section .s-con .cart-bar p:last-child .total-money {
 
 .r-con {
     margin: 0 auto;
+    display: block;
 }
 
 .r-con .recommend .r-title {
@@ -471,8 +473,8 @@ section .s-con .cart-bar p:last-child .total-money {
 }
 
 .r-con .recommend .r-items .item img {
-    width: 140px;
-    height: 140px;
+    width: 100px;
+    height: 100px;
     margin: 40px 0 20px;
 }
 

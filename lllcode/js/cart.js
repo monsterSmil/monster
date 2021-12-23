@@ -6,6 +6,7 @@ class Cart {
 
         this.getCartGoods();
         this.checkAll();
+        this.showCart();
 
         this.deleteAll = document.querySelector('#deleteAll');
         // console.log(this.deleteAll);
@@ -253,9 +254,28 @@ class Cart {
     }
 
 
+
+    // 显示与隐藏购物车列表【如果local中有数据，显示，没有数据，隐藏】
+    showCart() {
+      // console.log(222);
+      // 判断localStorage中是否有数据，没有数据隐藏table，foot，s-con显示
+        let data = localStorage.getItem('cart');
+        let tableAll = document.querySelector('#cartTable');
+        let foot = document.querySelector('#foot');
+        let cart = document.querySelector('.s-con');
+        // console.log(data);
+        if(data) {
+            cart.style.display = 'none';
+        }else {
+            tableAll.remove();
+            foot.remove();
+            cart.style.display = 'block';
+        }
+    }
+
     // 删除所有商品
     deleteAllFn() {
-        console.log(111);
+        // console.log(111);
         let that = this;
         layer.open({
             title: '确认删除框',
@@ -265,14 +285,29 @@ class Cart {
               //按钮【按钮二】的回调
               //return false 开启该代码可禁止点击该按钮关闭
               // console.log(target);
+
+            //   获取table，移除所有tr
+            let tableAll = document.querySelector('#cartTable');
+            let foot = document.querySelector('#foot');
+            // // console.log(tableAll);
+            // // console.log(foot);
+            tableAll.remove();
+            foot.remove();
+
               // 把tbody赋值为空
-              that.tbody.innerHTML = '';
+            //   that.tbody.innerHTML = '';
+            //   显示购物车为空
+
+
+            let cart = document.querySelector('.s-con');
+            cart.style.display = 'block';
             //   商品全部删除后，删除localStorage
                 localStorage.removeItem('cart');
             }
         });
     }
 
+  
 
     // 修改localStorage中的数据，num为0的时候删除
     modifyLocal(id, num = 0) {

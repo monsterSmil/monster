@@ -24,6 +24,7 @@ class Goods{
 
         this.navDisplay();
         
+        Nav.cartNum()
     }
 
     // 渲染商品详情页信息
@@ -428,7 +429,9 @@ class Goods{
         cartGoods = {[id]: num};
         localStorage.setItem('cart', JSON.stringify(cartGoods));
     }
+    Nav.cartNum()
    }
+ 
 }
 new Goods();
 
